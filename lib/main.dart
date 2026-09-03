@@ -33,11 +33,11 @@ class PantallaPrincipal extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         title: const Text('Apuntes de Flutter'),
-        backgroundColor: Colors.blue[700],
+        backgroundColor: Colors.pink[300],
         foregroundColor: Colors.white,
       ),
       body: Padding(
-        padding: const EdgeInsets.all(24.0),
+        padding: const EdgeInsets.all(20),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.stretch,
           children: [
@@ -50,7 +50,8 @@ class PantallaPrincipal extends StatelessWidget {
               ),
               textAlign: TextAlign.center,
             ),
-            const SizedBox(height: 30),
+
+            const SizedBox(height: 20),
 
             const Text(
               'Módulo 1',
@@ -59,6 +60,7 @@ class PantallaPrincipal extends StatelessWidget {
               ),
               textAlign: TextAlign.center,
             ),
+
             const SizedBox(height: 30),
 
             // BOTÓN PARA INTERFACES 1
@@ -71,11 +73,12 @@ class PantallaPrincipal extends StatelessWidget {
                   ),
                 );
               },
-              icon: const Icon(Icons.brush),
+              icon: const Icon(Icons.add),
               label: const Text('Interfaces 1'),
               style: ElevatedButton.styleFrom(
                 padding: const EdgeInsets.symmetric(vertical: 16),
                 textStyle: const TextStyle(fontSize: 18),
+                foregroundColor: Colors.pink[300],
               ),
             ),
             const SizedBox(height: 16),
@@ -90,28 +93,27 @@ class PantallaPrincipal extends StatelessWidget {
                   ),
                 );
               },
-              icon: const Icon(Icons.widgets),
+              icon: const Icon(Icons.add),
               label: const Text('Widgets, Scaffold, Composición y Listas'),
               style: ElevatedButton.styleFrom(
                 padding: const EdgeInsets.symmetric(vertical: 16),
                 textStyle: const TextStyle(fontSize: 18),
-                backgroundColor: Colors.teal[700],
-                foregroundColor: Colors.white,
+                foregroundColor: Colors.pink[300],
               ),
             ),
 
+            // EJEMPLO DE PRINT()
             const SizedBox(height: 16),
             ElevatedButton.icon(
               onPressed: () {
-                print('He leído el resumen de Widgets, Scaffold y Composición - Apellido');
+                print('Hola Sofi !!');
               },
-              icon: const Icon(Icons.print),
-              label: const Text('Botón de ejemplo (mirá la consola)'),
+              icon: const Icon(Icons.add),
+              label: const Text('Ejemplo de print() - Consola'),
               style: ElevatedButton.styleFrom(
                 padding: const EdgeInsets.symmetric(vertical: 16),
                 textStyle: const TextStyle(fontSize: 18),
-                backgroundColor: Colors.grey[700],
-                foregroundColor: Colors.white,
+                foregroundColor: Colors.pink[300],
               ),
             ),
 
@@ -126,17 +128,17 @@ class PantallaPrincipal extends StatelessWidget {
                   ),
                 );
               },
-              icon: const Icon(Icons.touch_app),
+              icon: const Icon(Icons.add),
               label: const Text('Eventos y DevTools'),
               style: ElevatedButton.styleFrom(
                 padding: const EdgeInsets.symmetric(vertical: 16),
                 textStyle: const TextStyle(fontSize: 18),
-                backgroundColor: Colors.deepPurple[700],
-                foregroundColor: Colors.white,
+                foregroundColor: Colors.pink[300],
               ),
             ),
 
             const SizedBox(height: 30),
+
             const Text(
               'Módulo 2',
               style: TextStyle(
@@ -147,7 +149,7 @@ class PantallaPrincipal extends StatelessWidget {
 
             // BOTÓN PARA CICLO DE VIDA ANIMACIONES
             const SizedBox(height: 16),
-            ElevatedButton(
+            ElevatedButton.icon(
               onPressed: () {
                 Navigator.push(
                   context,
@@ -156,9 +158,12 @@ class PantallaPrincipal extends StatelessWidget {
                   ),
                 );
               },
-              child: const Text(
-                'Ciclo de Vida y Animaciones Implicitas',
-                style: TextStyle(fontSize: 18), // Tamaño del texto
+              icon: const Icon(Icons.add),
+              label: const Text('Ciclo de Vida y Animaciones Implicitas'),
+              style: ElevatedButton.styleFrom(
+                padding: const EdgeInsets.symmetric(vertical: 16),
+                textStyle: const TextStyle(fontSize: 18),
+                foregroundColor: Colors.pink[300],
               ),
             ),
           ],
